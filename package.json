@@ -1,0 +1,28 @@
+{
+  "name": "squink-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for supplying TFT information from the Riot games TFT API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arangace/Squink-Bot.git"
+  },
+  "author": "Andy Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arangace/Squink-Bot/issues"
+  },
+  "homepage": "https://github.com/arangace/Squink-Bot#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.7.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "axios": "^0.23.0",
+    "discord-api-types": "^0.24.0",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.14"
+  }
+}
