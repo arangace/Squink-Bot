@@ -23,20 +23,16 @@ client.once('ready', (c) => {
 client.on('interactionCreate', async interaction => {
     if (!interaction.isCommand()) return;
 
-    const { commandName } = interaction;
     const command = client.commands.get(interaction.commandName);
 
     if (!command) return;
 
     try {
         await command.execute(interaction);
-        console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction.`);
-        console.log(interaction.commandName)
     } catch (error) {
         console.error(error);
-        await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+        return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
     }
-
     // if (commandName === 'ping') {
     //     await interaction.reply('Pong!');
     // } else if (commandName === 'server') {
